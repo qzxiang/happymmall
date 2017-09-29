@@ -2,9 +2,9 @@
 * @Author: Marte
 * @Date:   2017-09-28 17:04:55
 * @Last Modified by:   Marte
-* @Last Modified time: 2017-09-28 21:08:42
+* @Last Modified time: 2017-09-29 18:02:54
 */
 body{
-  background: url(../../image/banner1.jpg);
+  background: url(../../image/banner1.jpg) no-repeat;;
   color: red;
 }
