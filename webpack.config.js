@@ -42,7 +42,8 @@ var config = {
             util: __dirname + '/src/util',
             page: __dirname + '/src/page',
             service: __dirname + '/src/service',
-            image: __dirname + '/src/image'
+            image: __dirname + '/src/image',
+            node_modules: __dirname + '/node_modules'
         }
     },
     plugins: [
