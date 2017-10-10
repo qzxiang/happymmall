@@ -2,7 +2,7 @@
 * @Author: Marte
 * @Date:   2017-09-29 11:17:51
 * @Last Modified by:   Marte
-* @Last Modified time: 2017-09-30 00:35:27
+* @Last Modified time: 2017-10-10 01:13:15
 */
 
 'use strict';
@@ -21,6 +21,7 @@ var _mm = {
             success  : function(res){
                 // 请求成功
                 if(0 === res.status){
+                    //判断param.success是不是函数类型同时将一个参数传入名为param.success的函数下
                     typeof param.success === 'function' && param.success(res.data, res.msg);
                 }
                 // 没有登录状态，需要强制登录
@@ -73,13 +74,13 @@ var _mm = {
             return /^1\d{10}$/.test(value);
         }
         //邮箱格式验证
-        if('phone' === type){
+        if('email' === type){
             return /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(value);
         }
     },
     //统一登录处理
     doLogin : function(){
-        window.location.href = './login.html?redirect=' + encodeURIComponent(window.location.href);
+        window.location.href = './user-login.html?redirect=' + encodeURIComponent(window.location.href);
     },
     goHome : function(){
         window.location.href = './index.html';

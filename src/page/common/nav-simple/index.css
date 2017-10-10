@@ -2,7 +2,7 @@
 * @Author: Marte
 * @Date:   2017-10-05 01:25:47
 * @Last Modified by:   Marte
-* @Last Modified time: 2017-10-05 01:42:46
+* @Last Modified time: 2017-10-10 18:40:31
 */
 .nav-simple{
     height: 60px;
@@ -14,4 +14,5 @@
     font-size: 26px;
     font-weight: bold;
     color: #c60023;
+    text-decoration: none;
 }

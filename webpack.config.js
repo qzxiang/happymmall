@@ -22,7 +22,12 @@ var config = {
     entry: {
         'common': ['./src/page/common/index.js'],
         'index': ['./src/page/index/index.js'],
-        'login': ['./src/page/login/index.js'],
+        'user-login': ['./src/page/user-login/index.js'],
+        'user-register': ['./src/page/user-register/index.js'],
+        'user-pass-reset': ['./src/page/user-pass-reset/index.js'],
+        'user-center': ['./src/page/user-center/index.js'],
+        'user-center-update': ['./src/page/user-center-update/index.js'],
+        'user-pass-update': ['./src/page/user-pass-update/index.js'],
         'result': ['./src/page/result/index.js']
     },
     output: {
@@ -63,7 +68,12 @@ var config = {
     ]
 };
     var htmlFilenames = [{name :'index',   title : '首页' },
-                         {name :'login',   title : '用户登录' },
+                         {name :'user-login',   title : '用户登录' },
+                         {name :'user-register',   title : '用户注册' },
+                         {name :'user-pass-reset',   title : '找回密码' },
+                         {name :'user-center',   title : '个人中心' },
+                         {name :'user-center-update',   title : '修改个人信息' },
+                         {name :'user-pass-update',   title : '修改密码' },
                          {name :'result',  title : '操作结果' },
                         ];
         for(file in htmlFilenames){

@@ -2,7 +2,7 @@
 * @Author: Marte
 * @Date:   2017-10-07 18:11:54
 * @Last Modified by:   Marte
-* @Last Modified time: 2017-10-07 23:23:00
+* @Last Modified time: 2017-10-11 00:45:06
 */
 
 'use strict';
@@ -25,9 +25,9 @@ var navSide = {
                 href : './order-list.html'
             },
             {
-                name : 'pass-update',
+                name : 'user-pass-update',
                 desc : '修改密码',
-                href : './pass-update.html'
+                href : './user-pass-update.html'
             },
             {
                 name : 'about',
