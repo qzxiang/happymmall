@@ -2,7 +2,7 @@
 * @Author: Rosen
 * @Date:   2017-05-17 14:17:01
 * @Last Modified by:   Marte
-* @Last Modified time: 2017-10-07 18:17:01
+* @Last Modified time: 2017-10-11 22:48:06
 */
 
 'use strict';
@@ -13,7 +13,6 @@ var header = {
     init : function(){
         this.onLoad();
         this.bindEvent();
-        return this;
     },
     onLoad : function(){
         var keyword = _mm.getUrlParam('keyword');

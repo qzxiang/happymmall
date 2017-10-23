@@ -22,6 +22,8 @@ var config = {
     entry: {
         'common': ['./src/page/common/index.js'],
         'index': ['./src/page/index/index.js'],
+        'list': ['./src/page/list/index.js'],
+        'detail': ['./src/page/detail/index.js'],
         'user-login': ['./src/page/user-login/index.js'],
         'user-register': ['./src/page/user-register/index.js'],
         'user-pass-reset': ['./src/page/user-pass-reset/index.js'],
@@ -35,6 +37,21 @@ var config = {
         publicPath : '/dist',
         filename: "js/[name].js"
     },
+    /*devServer: {
+        historyApiFallback: true,
+        noInfo: false,
+        inline: true,
+        hot: true, //开启热点
+        port: '8088', //设置端口号
+        proxy: [
+            {
+                context:['/user','/product','/cart'],
+                target: 'http://happymmall.com',
+                changeOrigin: true,
+                secure: false
+            }
+        ]
+    },*/
     externals: {
       'jquery': "window.jQuery"
     },
@@ -61,20 +78,25 @@ var config = {
             filename: 'js/base.js'
         }),
         //把css单独打包到文件
-        new ExtractTextPlugin("css/[name].css")
+        new ExtractTextPlugin("css/[name].css"),
         //html模板的处理
         // new HtmlWebpackPlugin(getHtmlConfig('index')),
         // new HtmlWebpackPlugin(getHtmlConfig('login'))
+        /*模块热替换*/
+        //new webpack.HotModuleReplacementPlugin()
     ]
 };
-    var htmlFilenames = [{name :'index',   title : '首页' },
-                         {name :'user-login',   title : '用户登录' },
-                         {name :'user-register',   title : '用户注册' },
-                         {name :'user-pass-reset',   title : '找回密码' },
-                         {name :'user-center',   title : '个人中心' },
-                         {name :'user-center-update',   title : '修改个人信息' },
-                         {name :'user-pass-update',   title : '修改密码' },
-                         {name :'result',  title : '操作结果' },
+    var htmlFilenames = [
+                        {name :'index',   title : '首页' },
+                        {name :'list',   title : '商品列表页' },
+                        {name :'detail',   title : '商品详情页' },
+                        {name :'user-login',   title : '用户登录' },
+                        {name :'user-register',   title : '用户注册' },
+                        {name :'user-pass-reset',   title : '找回密码' },
+                        {name :'user-center',   title : '个人中心' },
+                        {name :'user-center-update',   title : '修改个人信息' },
+                        {name :'user-pass-update',   title : '修改密码' },
+                        {name :'result',  title : '操作结果' },
                         ];
         for(file in htmlFilenames){
             config.plugins.push(new HtmlWebpackPlugin(getHtmlConfig(htmlFilenames[file].name, htmlFilenames[file].title)))
